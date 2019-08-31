@@ -9,6 +9,7 @@
 				console.log("History Length "+' => '+window.history.length	+' - '+window.localStorage.getItem("H"+ window.localStorage.getItem('I')));
 				
 				//window.document.getElementById("result").innerHTML = window.localStorage.getItem("H"+window.localStorage.getItem('I'));
+				
 				window.document.getElementById("result").innerHTML = JSON.stringify(window.localStorage);
 				
 				try {
@@ -30,4 +31,13 @@
 function loginOut(){
 	window.localStorage.setItem("loginFlag",'N');
 	window.history.go(0);
+}
+
+function clearOut(){
+	window.localStorage.clear();
+	window.history.go(0);
+}
+
+function callApp01(){
+	window.location.assign("http://localhost:8081/app01");
 }
